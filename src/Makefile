@@ -7,10 +7,10 @@ LDIR = ../lib
 
 LIBS = -lm
 
-_DEPS = common.h chunk.h memory.h debug.h value.h vm.h
+_DEPS = common.h chunk.h memory.h debug.h value.h vm.h compiler.h scanner.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = phlox.o chunk.o memory.o debug.o value.o vm.o
+_OBJ = phlox.o chunk.o memory.o debug.o value.o vm.o compiler.o scanner.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.c $(DEPS)
